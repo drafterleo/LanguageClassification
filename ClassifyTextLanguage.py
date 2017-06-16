@@ -62,20 +62,20 @@ def classifyLanguage():
 
     #genRandomTextFile("text_rnd.txt", 100000)
 
-    appendNgVectorToBase("text_rus.txt", langName="rus", base=lang_vectors)
-    appendNgVectorToBase("text_ukr.txt", langName="ukr", base=lang_vectors)
-    appendNgVectorToBase("text_bel.txt", langName="bel", base=lang_vectors)
-    appendNgVectorToBase("text_blg.txt", langName="blg", base=lang_vectors)
-    appendNgVectorToBase("text_eng.txt", langName="eng", base=lang_vectors)
-    appendNgVectorToBase("text_jbo.txt", langName="jbo", base=lang_vectors)
-    appendNgVectorToBase("text_epo.txt", langName="epo", base=lang_vectors)
-    appendNgVectorToBase("text_pol.txt", langName="pol", base=lang_vectors)
+    appendNgVectorToBase("./data/text_rus.txt", langName="rus", base=lang_vectors)
+    appendNgVectorToBase("./data/text_ukr.txt", langName="ukr", base=lang_vectors)
+    appendNgVectorToBase("./data/text_bel.txt", langName="bel", base=lang_vectors)
+    appendNgVectorToBase("./data/text_blg.txt", langName="blg", base=lang_vectors)
+    appendNgVectorToBase("./data/text_eng.txt", langName="eng", base=lang_vectors)
+    appendNgVectorToBase("./data/text_jbo.txt", langName="jbo", base=lang_vectors)
+    appendNgVectorToBase("./data/text_epo.txt", langName="epo", base=lang_vectors)
+    appendNgVectorToBase("./data/text_pol.txt", langName="pol", base=lang_vectors)
 
     #appendVectorToBase("text_rnd.txt", "rnd", lang_vector_base)
 
     print("-------------------------------------------------------------")
 
-    text = filterTxtFile("tst_rus.txt", transliterate=True)
+    text = filterTxtFile("./data/tst_rus.txt", transliterate=True)
     print(text, '\n')
 
     print(classifyTextByMinFn(text, lang_vectors, compareNgVectorsByDistance, "distance to "))
